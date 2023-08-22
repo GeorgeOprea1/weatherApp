@@ -1,6 +1,8 @@
 const clearBtn = document.querySelector(".reset-button");
 const searchBtn = document.querySelector(".search-button");
 const displayWeather = document.querySelector(".display-div");
+const displayHumidity = document.querySelector(".humidity");
+const displayWind = document.querySelector(".wind");
 
 clearBtn.addEventListener("click", clearSearch);
 searchBtn.addEventListener("click", fetchWeather);
@@ -19,7 +21,10 @@ async function fetchWeather() {
 
     const currentData = await response.json();
     console.log(currentData);
-    displayWeather.textContent = currentData.main.temp;
+    displayWeather.textContent = currentData.main.temp + " " + "°C";
+    displayHumidity.textContent = "Humidity:" + " " + currentData.main.humidity;
+    displayWind.textContent =
+      "Wind:" + " " + currentData.wind.speed + " " + "mph";
   } catch (err) {
     console.log(
       "Something went wrong with fetching the current weather data...",
@@ -30,4 +35,7 @@ async function fetchWeather() {
 
 function clearSearch() {
   document.getElementById("search-city").value = "";
+  displayWeather.textContent = "";
+  displayHumidity.textContent = "";
+  displayWind.textContent = "";
 }

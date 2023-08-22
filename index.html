@@ -7,21 +7,30 @@
     <title>JS Weather App</title>
   </head>
   <body>
-    <form>
-      <label for="search">Find Weather Info By Location:</label>
-      <input
-        type="text"
-        id="search-city"
-        class="search-city"
-        name="search-city"
-        placeholder="Enter City..."
-        required
-      />
+    <div class="container">
+      <form>
+        <label for="search"></label>
+        <input
+          type="text"
+          id="search-city"
+          class="search-city"
+          name="search-city"
+          placeholder="Enter City..."
+          required
+        />
 
-      <button type="button" class="search-button">Search</button>
-      <button type="reset" class="reset-button">Clear</button>
-    </form>
-    <div class="display-div"></div>
+        <button type="button" class="search-button">
+          <img class="icon" src="icons/magnifying-glass-solid.svg" alt="" />
+        </button>
+        <button type="reset" class="reset-button">
+          <img class="icon" src="icons/trash-solid.svg" alt="" />
+        </button>
+      </form>
+      <div class="display-div"></div>
+      <div class="display-div2">
+        <div class="humidity"></div>
+        <div class="wind"></div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
