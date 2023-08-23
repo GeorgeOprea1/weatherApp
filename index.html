@@ -15,18 +15,22 @@
           id="search-city"
           class="search-city"
           name="search-city"
-          placeholder="Enter City..."
+          placeholder="Type to search..."
+          autocomplete="off"
           required
         />
 
         <button type="button" class="search-button">
-          <img class="icon" src="icons/magnifying-glass-solid.svg" alt="" />
+          <img class="icon" src="icons/search.svg" alt="" />
         </button>
         <button type="reset" class="reset-button">
-          <img class="icon" src="icons/trash-solid.svg" alt="" />
+          <img class="icon" src="icons/trash.svg" alt="" />
         </button>
       </form>
-      <div class="display-div"></div>
+      <div class="display-div">
+        <div class="temperature"></div>
+        <h2 class="city-name"></h2>
+      </div>
       <div class="display-div2">
         <div class="humidity"></div>
         <div class="wind"></div>
