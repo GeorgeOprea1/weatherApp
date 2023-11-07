@@ -1,179 +1,125 @@
 body {
-  background-color: rgb(28, 156, 246);
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-form {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 50px;
-  width: 80%;
-  border-bottom: 2px solid #fff;
-}
-
-label,
-input,
-button {
-  margin: 5px;
-  border: none;
-  background-color: transparent;
-  height: 2.5rem;
-  opacity: 0.8;
+  background-color: rgb(24, 154, 211);
+  font-family: cursive;
   color: #fff;
-  cursor: pointer;
-}
-
-input:focus {
-  outline: none;
-  background-color: transparent;
-}
-
-input:active {
-  background-color: transparent;
-}
-input {
-  width: 90%;
-  font-weight: 800;
-  text-transform: capitalize;
-  font-size: large;
-}
-
-::placeholder {
-  color: #fff;
-  font-size: larger;
-}
-
-.display-div,
-.display-div2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 212px;
-  width: 205px;
-  margin-top: 50px;
-  font-size: 4rem;
-  color: #fff;
-  width: 80%;
-}
-
-.display-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  color: #fff;
-  width: 80%;
-  height: 70%;
-  opacity: 0.9;
-}
-
-.display-div > * {
-  flex: 1;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 5px solid #fff;
-  border-radius: 30px;
-  width: 800px;
-  min-width: 40%;
-  height: 70%;
-  background-image: url(backgrounds/landscape-sky-dusk-beauty-beach.jpg);
-  background-size: cover;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
 }
 
-.icon {
-  width: 1.8rem;
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  flex: 1 1 0;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  width: 75%;
+  color: #fff;
+}
+
+input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+button {
+  background: transparent;
+  border: none;
   cursor: pointer;
 }
 
-.icon-black {
-  display: none;
+button:hover {
+  background-color: rgb(20, 150, 200);
+}
+
+.icon {
+  width: 1.4rem;
+}
+
+.display-div {
+  display: flex;
+  flex-direction: column;
+
+  width: 90%;
+  flex: 4 1 0;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  flex: 1 2;
+}
+
+.forecast {
+  display: flex;
+  flex-direction: column;
+  flex: 2 1;
+}
+.city-name {
+  flex: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.date-time {
+  flex: 1;
+  text-align: center;
+}
+
+.weather-description {
+  flex: 1 2;
+  text-align: center;
+}
+.temperature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: #fff;
+  flex: 3 1;
+  width: 100%;
 }
 
 .display-div2 {
+  width: 90%;
+  flex: 1 1 0;
   display: flex;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  padding: 1rem;
-  margin: 0;
-  height: auto;
-  margin: 3rem 0 3rem 0;
-  background-color: rgba(255, 255, 255, 0.3);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
-
 .display-div2 > * {
   flex: 1;
 }
 
-.humidity,
+.humidity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid #fff;
+}
+
 .wind {
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
-  color: #fff;
-  font-weight: 600;
-}
-
-.humidity {
-  border-right: 3px solid #fff;
-}
-
-.icon:hover {
-  opacity: 0.7;
-}
-
-.icon:active {
-  transform: scale(1.5);
-}
-
-.city-name {
-  width: 80%;
-  margin: 0;
-  font-size: 2rem;
-  text-align: center;
-  font-weight: 300;
-}
-
-.temperature {
-  width: 90%;
-  text-align: center;
-  font-size: 5rem;
-  display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-@media (max-width: 800px) {
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  .container {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 0;
-  }
-
-  .display-div {
-    height: 70%;
-  }
-
-  .temperature {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .display-div2 > * {
-    font-size: 1rem;
-  }
 }

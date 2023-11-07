@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <form>
-        <label for="search"></label>
+        <label for="search-city"></label>
         <input
           type="text"
           id="search-city"
@@ -17,6 +17,7 @@
           name="search-city"
           placeholder="Type to search..."
           autocomplete="off"
+          style="text-transform: capitalize"
           required
         />
 
@@ -28,8 +29,14 @@
         </button>
       </form>
       <div class="display-div">
-        <div class="temperature"></div>
-        <h2 class="city-name"></h2>
+        <div class="location">
+          <div class="city-name"></div>
+          <div class="date-time"></div>
+        </div>
+        <div class="forecast">
+          <div class="temperature"></div>
+          <div class="weather-description"></div>
+        </div>
       </div>
       <div class="display-div2">
         <div class="humidity"></div>
