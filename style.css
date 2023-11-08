@@ -58,7 +58,7 @@ button:active {
 }
 
 .icon {
-  width: 1.4rem;
+  width: 1.5rem;
 }
 
 .display-div {
@@ -147,4 +147,18 @@ button:active {
   align-items: center;
   justify-content: center;
   font-size: calc(1rem + 1vw);
+}
+
+@media screen and (min-width: 1000px) {
+  .icon {
+    width: 15%;
+  }
+
+  button {
+    padding: 0;
+  }
+
+  form {
+    width: 85%;
+  }
 }
