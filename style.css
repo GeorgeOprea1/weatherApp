@@ -78,11 +78,6 @@ button:active {
   width: 4%;
 }
 
-.abc {
-  display: flex;
-  width: 100%;
-}
-
 .forecast {
   display: flex;
   flex-direction: column;
@@ -101,7 +96,7 @@ button:active {
 .date-time {
   flex: 1;
   text-align: center;
-  font-size: calc(0.5rem + 1vw);
+  font-size: calc(0.6rem + 1vw);
 }
 
 .weather-description {
@@ -113,7 +108,7 @@ button:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: calc(6rem + 2vw);
+  font-size: calc(5rem + 2vw);
   color: #fff;
   flex: 3 1;
   width: 100%;
@@ -138,7 +133,7 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.7rem + 1vw);
   border-right: 1px solid #fff;
 }
 
@@ -146,10 +141,10 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.7rem + 1vw);
 }
 
-@media screen and (min-width: 1000px) {
+@media all and (min-width: 1000px) {
   .icon {
     width: 15%;
   }
