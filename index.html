@@ -9,6 +9,13 @@
   <body>
     <div class="container">
       <form>
+        <button type="button" class="location-button" title="My location">
+          <img
+            class="icon pin"
+            src="icons/location-pin.svg"
+            alt="search icon"
+          />
+        </button>
         <label for="search-city"></label>
         <input
           type="text"
@@ -21,10 +28,10 @@
           required
         />
 
-        <button type="button" class="search-button">
+        <button type="button" class="search-button" title="Search">
           <img class="icon" src="icons/search.svg" alt="search icon" />
         </button>
-        <button type="reset" class="reset-button">
+        <button type="reset" class="reset-button" title="Delete">
           <img class="icon" src="icons/trash.svg" alt="trash" />
         </button>
       </form>

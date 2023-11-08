@@ -7,19 +7,15 @@ const displayCity = document.querySelector(".city-name");
 const displayTemp = document.querySelector(".temperature");
 const container = document.querySelector(".container");
 const displayInfo = document.querySelector(".display-div2");
+const displayDateTime = document.querySelector(".date-time");
+const locationBtn = document.querySelector(".location-button");
 const displayWeatherDescription = document.querySelector(
   ".weather-description"
 );
 
-const displayDateTime = document.querySelector(".date-time");
-
 clearBtn.addEventListener("click", clearSearch);
 searchBtn.addEventListener("click", getInputVal);
-
-function getInputVal() {
-  const searchCity = document.getElementById("search-city").value;
-  fetchWeather(searchCity);
-}
+locationBtn.addEventListener("click", getLocation);
 
 async function fetchWeather(x) {
   try {
@@ -67,6 +63,28 @@ function clearSearch() {
   displayCity.textContent = "";
   displayDateTime.textContent = "";
   displayWeatherDescription.textContent = "";
+}
+
+function getInputVal() {
+  const searchCity = document.getElementById("search-city").value;
+  fetchWeather(searchCity);
+}
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const long = position.coords.longitude;
+      const lat = position.coords.latitude;
+      const url = `https://api-bdc.net/data/reverse-geocode-client?latitude=${lat}&longitude=${long}`;
+
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          fetchWeather(data.city);
+        });
+    });
+  }
 }
 
 fetchWeather("Bucharest");

@@ -2,7 +2,6 @@ body {
   background-color: rgb(24, 154, 211);
   font-family: cursive;
   color: #fff;
-  overflow-y: scroll;
 }
 
 .container {
@@ -18,8 +17,9 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 75%;
+  width: 80%;
   flex: 1 1 0;
+  gap: 5px;
 }
 
 input {
@@ -45,6 +45,7 @@ button {
   cursor: pointer;
   transition: all 0.2s;
   border-radius: 5px;
+  padding: 0.5rem;
 }
 
 button:hover {
