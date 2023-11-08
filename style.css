@@ -2,6 +2,7 @@ body {
   background-color: rgb(24, 154, 211);
   font-family: cursive;
   color: #fff;
+  overflow-y: scroll;
 }
 
 .container {
@@ -27,6 +28,7 @@ input {
   border-bottom: 1px solid white;
   width: 75%;
   color: #fff;
+  font-size: calc(0.7rem + 1vw);
 }
 
 input:focus {
@@ -41,10 +43,17 @@ button {
   background: transparent;
   border: none;
   cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 5px;
 }
 
 button:hover {
-  background-color: rgb(20, 150, 200);
+  background-color: rgb(0, 171, 239);
+}
+
+button:active {
+  transform: scale(0.8, 0.8);
+  background-color: rgb(15, 130, 170);
 }
 
 .icon {
@@ -54,7 +63,6 @@ button:hover {
 .display-div {
   display: flex;
   flex-direction: column;
-
   width: 90%;
   flex: 4 1 0;
 }
@@ -65,35 +73,46 @@ button:hover {
   flex: 1 2;
 }
 
+.location-icon {
+  width: 4%;
+}
+
+.abc {
+  display: flex;
+  width: 100%;
+}
+
 .forecast {
   display: flex;
   flex-direction: column;
   flex: 2 1;
 }
 .city-name {
-  flex: 2;
-
+  flex: 3;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: calc(3rem + 1vw);
   color: #fff;
+  margin: 0;
 }
 
 .date-time {
   flex: 1;
   text-align: center;
+  font-size: calc(0.5rem + 1vw);
 }
 
 .weather-description {
   flex: 1 2;
   text-align: center;
+  font-size: calc(0.7rem + 1vw);
 }
 .temperature {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5rem;
+  font-size: calc(6rem + 2vw);
   color: #fff;
   flex: 3 1;
   width: 100%;
@@ -103,9 +122,12 @@ button:hover {
   width: 90%;
   flex: 1 1 0;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
+  border: 2px solid white;
+  border-radius: 1rem;
+  background-color: rgb(68, 169, 213);
 }
 .display-div2 > * {
   flex: 1;
@@ -115,11 +137,13 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 2px solid #fff;
+  font-size: calc(1rem + 1vw);
+  border-right: 1px solid #fff;
 }
 
 .wind {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: calc(1rem + 1vw);
 }
