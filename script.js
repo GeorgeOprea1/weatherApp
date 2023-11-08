@@ -87,4 +87,11 @@ function getLocation() {
   }
 }
 
+document.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    searchBtn.click();
+  }
+});
+
 fetchWeather("Bucharest");
