@@ -1,7 +1,12 @@
+html {
+  height: 100%;
+}
+
 body {
   background-color: rgb(24, 154, 211);
   font-family: cursive;
   color: #fff;
+  height: 100%;
 }
 
 .container {
@@ -121,6 +126,7 @@ button:active {
   border: 2px solid white;
   border-radius: 1rem;
   background-color: rgb(68, 169, 213);
+  margin-bottom: 2rem;
 }
 .display-div2 > * {
   flex: 1;
