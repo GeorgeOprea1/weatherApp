@@ -1,29 +1,28 @@
-html {
-  height: 100%;
-}
-
 body {
   background-color: #64c4ed;
   font-family: cursive;
   color: #fcfafa;
-  height: 100%;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   gap: 1rem;
+}
+
+.container > * {
+  flex: 1;
 }
 
 form {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 80%;
-  flex: 1 1 0;
+  align-items: center;
+  width: 90%;
+  height: 10vh;
   gap: 5px;
 }
 
@@ -52,6 +51,8 @@ button {
   border-radius: 5px;
   padding: 0.5rem;
   width: calc(3rem + 1vw);
+  display: flex;
+  align-items: center;
 }
 
 button:hover {
@@ -118,7 +119,6 @@ button:active {
 
 .display-div2 {
   width: 90%;
-  flex: 1 1 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,6 +127,7 @@ button:active {
   border-radius: 1rem;
   background-color: #25ade8;
   margin-bottom: 2rem;
+  flex: 1 1 0;
 }
 .display-div2 > * {
   flex: 1;
@@ -145,4 +146,24 @@ button:active {
   align-items: center;
   justify-content: center;
   font-size: calc(0.7rem + 1vw);
+}
+
+.footer {
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7em;
+  font-size: calc(1rem + 0.7vw);
+  flex: 1 1 0;
+}
+
+#icon {
+  width: 1.5em;
+  cursor: pointer;
+}
+
+#icon:hover {
+  transform: rotate(360deg) scale(1.2);
+  transition: transform 0.3s ease-in-out;
 }
