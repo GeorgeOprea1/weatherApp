@@ -1,6 +1,6 @@
-# [WeatherApp]{https://georgeoprea1.github.io/weatherApp/}
+# [WeatherApp](https://georgeoprea1.github.io/weatherApp/)
 
-![Weather App interface image](weatherAppPhoto.avif)
+![Weather App interface image](./icons%20and%20images/weatherAppPhoto.avif)
 
 ## Features
 
